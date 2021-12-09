@@ -1,5 +1,5 @@
 package com.java.controller;
 
 public class BoardController {
-//	아 모르겠음
+//	토큰적용인데 된건가?
 }

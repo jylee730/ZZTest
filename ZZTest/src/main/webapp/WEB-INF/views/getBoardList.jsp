@@ -7,18 +7,27 @@
 <title>Insert title here</title>
 <style>
 	table{
-	border: solid;
+	border: 3px solid;
+    border-collapse: collapse;
 	position:relative;
 	width:70%;
 	height:50%;
 	margin-left:15%;
-	text-align: center;
+	text-align: center;	
 	}
 	th{
-	border: solid;
+	background-color: #bbdefb;
+	border: 1px solid;
+    border-collapse: collapse;
+	bgcolor: red;
+	padding: 10px;
 	}
 	td{
-	border: solid;
+	background-color: #e3f2fd;
+	border: 1px solid;
+    border-collapse: collapse;
+	bgcolor: red;
+	padding: 10px;
 	}
 </style>
 </head>
@@ -28,11 +37,11 @@
 	<br><br><hr><br><br>
 	<table>
 		<tr>
-			<th>번호</th>
-			<th>제목</th>
-			<th>글쓴이</th>
-			<th>등록일</th>
-			<th>조회</th>
+			<th width="10%">번호</th>
+			<th width="55%">제목</th>
+			<th width="15%">글쓴이</th>
+			<th width="10%">등록일</th>
+			<th width="10%">조회</th>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -40,6 +49,13 @@
 			<td>1</td>
 			<td>1</td>
 			<td>1</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>2</td>
+			<td>2</td>
+			<td>2</td>
+			<td>2</td>
 		</tr>
 	</table>
 </body>

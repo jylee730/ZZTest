@@ -2,12 +2,18 @@ package com.java.boardService;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.java.boardDAO.BoardDAO;
 import com.java.domain.BoardVO;
+
 @Service("boardService")
 public class BoardServiceImpl implements BoardService{
 
+	@Autowired
+	private BoardDAO boardDAO;
+	
 	@Override
 	public void insertBoard(BoardVO vo) {
 		// TODO Auto-generated method stub
@@ -34,8 +40,8 @@ public class BoardServiceImpl implements BoardService{
 
 	@Override
 	public List<BoardVO> getBoardList() {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("BoardServiceImpl >> BoardDAO");
+		return boardDAO.getBoardList();
 	}
 
 }

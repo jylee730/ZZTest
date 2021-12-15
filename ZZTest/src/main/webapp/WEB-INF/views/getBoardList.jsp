@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,20 +45,16 @@
 			<th width="10%">등록일</th>
 			<th width="10%">조회</th>
 		</tr>
+		<c:forEach items="${boardList}" var="board">
 		<tr>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
+			<td>${board.seq}</td>
+			<td><a href="getBoard.do?seq=${board.seq}">${board.title}</a></td>
+			<td>${board.writer}</td>
+			<td><fmt:formatDate value="${board.regDate}" pattern="yy-MM-dd"/></td>
+			<td>${board.cnt}</td>
 		</tr>
-		<tr>
-			<td>2</td>
-			<td>2</td>
-			<td>2</td>
-			<td>2</td>
-			<td>2</td>
-		</tr>
+		</c:forEach>
 	</table>
+	<br> <a href="insertBoard.do">새글 등록</a>
 </body>
 </html>

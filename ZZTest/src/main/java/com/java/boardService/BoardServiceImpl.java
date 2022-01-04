@@ -34,8 +34,8 @@ public class BoardServiceImpl implements BoardService{
 
 	@Override
 	public BoardVO getBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("BoardServiceImpl >> BoardDAO");
+		return boardDAO.getBoard(vo);
 	}
 
 	@Override

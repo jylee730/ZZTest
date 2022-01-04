@@ -37,9 +37,9 @@ a.button:hover {
 </style>
 </head>
 <body>
+	<br><br>
 	<h1 style="text-align: center;">게시판 프로그램</h1>
-		<hr>
-		<br>
+	<br><br><hr><br><br>
 		<div class="wrap">
 			<a href="getBoardList.do" class="button">BoardList 이동</a>
 		</div>

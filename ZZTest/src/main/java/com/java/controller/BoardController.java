@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.java.boardService.BoardService;
+import com.java.domain.BoardVO;
 
 @Controller
 public class BoardController {
@@ -21,7 +22,14 @@ public class BoardController {
 		
 	}
 	
-	
+	@RequestMapping(value="/getBoard.do")
+	public String getBoard(BoardVO vo,Model model) {
+		System.out.println("/getBoard.do 호출");
+		System.out.println("> 글 번호 : " + vo.getSeq());
+		// 리턴받을준비
+		model.addAttribute("board",boardService.getBoard(vo));
+		return "getBoard";
+	}
 	
 	@RequestMapping("/test.do")
 	public void test() {

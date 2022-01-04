@@ -9,4 +9,9 @@
 	  		FROM board
 	  		ORDER BY seq DESC
      	</select>
+     	<select id="getBoard" parameterType="board" resultType="board">
+	  		SELECT *
+	  		FROM board
+	  		WHERE seq = #{seq}  	
+  		</select>
      </mapper>

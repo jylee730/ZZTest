@@ -34,8 +34,8 @@ public class BoardDAOImpl implements BoardDAO{
 
 	@Override
 	public BoardVO getBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("BoardDAO >> mybatis");
+		return mybatis.selectOne("BoardDAO.getBoard",vo); 
 	}
 
 	@Override

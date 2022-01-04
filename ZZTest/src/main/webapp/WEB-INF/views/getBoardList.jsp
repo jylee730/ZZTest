@@ -39,7 +39,7 @@
 	margin-left:80%;
 	border: 2px solid;
 	background-color: #bbdefb;
-	border-radius: 25px;
+	border-radius: 10px;
 	}
 	a{
 	font-weight:bold;
@@ -71,6 +71,6 @@
 		</c:forEach>
 	</table>
 	<br>
-	<div class="newone-wrap"><a href="insertBoard.do" class="newone">새글 등록</a></div>
+	<div class="newone-wrap"><a href="insertBoard.do">새글 등록</a></div>
 </body>
 </html>

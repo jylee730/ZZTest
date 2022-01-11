@@ -14,4 +14,10 @@
 	  		FROM board
 	  		WHERE seq = #{seq}  	
   		</select>
+  		<update id="updateBoard" parameterType="board">
+  			UPDATE board
+  			SET title = #{title},
+  			content = #{content}
+  			WHERE seq = #{seq}	
+  		</update>
      </mapper>

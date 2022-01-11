@@ -28,8 +28,8 @@ public class BoardDAOImpl implements BoardDAO{
 
 	@Override
 	public void updateBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("BoardDAO >> mybatis");
+		mybatis.update("BoardDAO.updateBoard",vo);
 	}
 
 	@Override

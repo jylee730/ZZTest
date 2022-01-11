@@ -31,6 +31,12 @@ public class BoardController {
 		return "getBoard";
 	}
 	
+	@RequestMapping(value="/updateBoard.do")
+	public String updateBoard(BoardVO vo) {
+		boardService.updateBoard(vo);
+		return "redirect:/getBoard.do?seq="+vo.getSeq();
+	}
+	
 	@RequestMapping("/test.do")
 	public void test() {
 		System.out.println("/test.do 확인");

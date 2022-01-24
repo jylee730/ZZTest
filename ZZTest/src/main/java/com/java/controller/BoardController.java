@@ -37,6 +37,23 @@ public class BoardController {
 		return "redirect:/getBoard.do?seq="+vo.getSeq();
 	}
 	
+	@RequestMapping(value="/insertBoard.do")
+	public String insertBoard(Model model) {
+		return "insertBoard";
+	}
+	
+	@RequestMapping(value = "/saveBoard.do")
+	public String saveBoard(BoardVO vo) {
+		boardService.insertBoard(vo);
+		return "redirect:/getBoardList.do";
+	}
+	
+	@RequestMapping(value="/deleteBoard.do")
+	public String deleteBoard(BoardVO vo) {
+		boardService.deleteBoard(vo);
+		return "redirect:/getBoardList.do";
+	}
+	
 	@RequestMapping("/test.do")
 	public void test() {
 		System.out.println("/test.do 확인");

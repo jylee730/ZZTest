@@ -16,13 +16,14 @@ public class BoardServiceImpl implements BoardService{
 	
 	@Override
 	public void insertBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("BoardServiceImpl >> BoardDAO");
+		boardDAO.insertBoard(vo);		
 	}
 
 	@Override
 	public void deleteBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
+		System.out.println("BoardServiceImpl >> BoardDAO");
+		boardDAO.deleteBoard(vo);
 		
 	}
 

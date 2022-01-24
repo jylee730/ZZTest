@@ -16,14 +16,14 @@ public class BoardDAOImpl implements BoardDAO{
 	
 	@Override
 	public void insertBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("BoardDAO >> mybatis");
+		mybatis.insert("BoardDAO.insertBoard",vo);		
 	}
 
 	@Override
 	public void deleteBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("BoardDAO >> mybatis");
+		mybatis.delete("BoardDAO.deleteBoard",vo);		
 	}
 
 	@Override

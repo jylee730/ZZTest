@@ -20,4 +20,13 @@
   			content = #{content}
   			WHERE seq = #{seq}	
   		</update>
+  		<insert id="insertBoard" parameterType="board">
+	  		INSERT INTO board(SEQ,TITLE,WRITER,CONTENT,REGDATE,CNT)
+	  		VALUES(board_seq.nextval,#{title},#{writer},#{content},sysdate,0)  	
+  		</insert>
+  		<delete id="deleteBoard" parameterType="board">
+			DELETE
+		  	FROM board
+		  	WHERE seq = #{seq}
+  		</delete>
      </mapper>

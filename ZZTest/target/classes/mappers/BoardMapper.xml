@@ -18,8 +18,14 @@
   			UPDATE board
   			SET title = #{title},
   			content = #{content}
-  			WHERE seq = #{seq}	
+  			WHERE seq = #{seq}
   		</update>
+  		<update id="plusCnt" parameterType="int">
+  			UPDATE board
+  			SET cnt = cnt + 1 
+  			WHERE seq = #{seq}
+		</update>
+
   		<insert id="insertBoard" parameterType="board">
 	  		INSERT INTO board(SEQ,TITLE,WRITER,CONTENT,REGDATE,CNT)
 	  		VALUES(board_seq.nextval,#{title},#{writer},#{content},sysdate,0)  	

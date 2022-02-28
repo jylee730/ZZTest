@@ -1,5 +1,5 @@
 <%@page contentType="text/html; charset=UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE>
 <html>
 <head>
@@ -65,7 +65,7 @@
 				</tr>
 				<tr>	
 					<td style="background: #bbdefb">등록일</td>
-					<td align="left">${board.regDate }</td>
+					<td align="left"><fmt:formatDate value="${board.regDate}" pattern="yyyy.MM.dd"/></td>
 				</tr>
 				<tr>
 					<td style="background: #bbdefb">조회수</td>
